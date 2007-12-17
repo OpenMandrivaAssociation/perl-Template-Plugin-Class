@@ -14,7 +14,6 @@ Source:         http://www.cpan.org/modules/by-module/Template/%{module}-%{versi
 Buildrequires:  perl(Module::Build)
 Buildrequires:  perl(Template)
 buildArch:      noarch
-buildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 Template::Plugin::Class allows you to call class methods on arbitrary classes.
