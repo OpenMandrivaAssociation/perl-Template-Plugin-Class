@@ -1,15 +1,13 @@
 %define upstream_name    Template-Plugin-Class
-%define upstream_version 0.14
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.14
+Release:	6
 
 Summary:	Allow calling of class methods on arbitrary classes
 License:	Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Template-Plugin-Class
-Source0:	https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Template-Plugin-Class-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Template-Plugin-Class-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -20,7 +18,7 @@ BuildArch:	noarch
 Template::Plugin::Class allows you to call class methods on arbitrary classes.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL installdirs=vendor
@@ -41,9 +39,7 @@ perl Makefile.PL installdirs=vendor
 %changelog
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.140.0-1mdv2010.0
 + Revision: 405531
-- rebuild using %%perl_convert_version
-
-* Thu May 07 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.14-1mdv2010.0
+- rebuild using %0.14 Thu May 07 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.14-1mdv2010.0
 + Revision: 373049
 - new version
 
